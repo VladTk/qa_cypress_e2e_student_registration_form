@@ -8,7 +8,7 @@ describe('Student Registration page', () => {
   const phone = '1234567890';
   const birthDay = '23 July,2004';
   const subjects = 'Maths';
-  const hobbies = ['Sports', 'Reading']; // можеш додати інші
+  const hobbies = ['Sports', 'Reading'];
   const address = 'Current Address';
   const state = 'NCR';
   const city = 'Delhi';
@@ -27,8 +27,7 @@ describe('Student Registration page', () => {
     cy.get('#dateOfBirthInput').click();
     cy.get('.react-datepicker__month-select').select('July');
     cy.get('.react-datepicker__year-select').select('2004');
-    cy.get('.react-datepicker__day--023')
-      .click();
+    cy.get('.react-datepicker__day--023').click();
 
     cy.get('.subjects-auto-complete__value-container').type(subjects);
 
